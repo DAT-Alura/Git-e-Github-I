@@ -25,3 +25,16 @@ Como fazemos para o Git passar a enxergar determinada pasta como um repositório
 
 - Através do comando git repository init
 - Através do comando git init-repository
+
+## Aula 2
+
+1 - Para que o Git saiba quem está realizando as alterações, ele precisa de algumas configurações. Na primeira vez que você tentar realizar um commit em uma máquina, ele pedirá que você o configure.
+
+Como podemos definir o nome da pessoa que executa commits no repositório local atual?
+
+- git config --local username "Nome da pessoa"
+- __git config --local user.name "Nome da pessoa"__
+
+> Alternativa correta! Assim todos os commits executados neste repositório serão atribuídos à pessoa com nome Nome da pessoa. Para mais detalhes e outras configurações possíveis (até algumas mais avançadas), você pode conferir este link: <https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration>.
+
+- git config --global user.name "Nome da pessoa"
