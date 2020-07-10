@@ -95,3 +95,56 @@ Neste cenário, qual a diferença entre os comandos rebase e merge?
 > Alternativa correta! Com isso, evitamos os commits de merge. Há uma longa discussão sobre o que é "melhor": rebase ou merge. Estude, pesquise, e tire suas próprias conclusões. Aqui tem um artigo (de milhares outros) que cita o assunto: <https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c>.
 
 - Ambos são sinônimos, ou seja, não há diferença
+
+## Aula 5
+
+1 - No último vídeo, nós aprendemos a desfazer alterações das quais não vamos precisar mais.
+
+Quais os comandos, respectivamente, desfazem alterações antes de adicioná-las (1), depois de adicioná-las, mas antes de commitá-las (2), e após realizar o commit (3)?
+
+- A
+
+``` code
+1 - git revert
+2 - git reset
+3 - git checkout
+```
+
+- __B__
+
+``` code
+1 - git rm
+2 - git reset
+3 - git bisect
+```
+
+- __C__
+
+``` code
+1 - git checkout
+2 - git reset
+3 - git revert
+```
+
+> Alternativa correta! Com o git checkout nós desfazemos uma alteração que ainda não foi adicionada ao index ou stage, ou seja, antes do git add. Depois de adicionar com git add, para desfazer uma alteração, precisamos tirá-la deste estado, com git reset. Agora, se já realizamos o commit, o comando git revert pode nos salvar.
+
+2 - Vimos como podemos utilizar git stash para armazenar temporariamente algumas de nossas alterações.
+
+Em que momento o stash parece útil?
+
+- Quando finalizamos uma tarefa e queremos salvar estas alterações
+- Quando queremos ver como o nosso código era antes
+- __Quando precisamos parar o desenvolvimento de algo no meio para trabalhar em outra coisa__
+
+> Alternativa correta! Quando precisamos pausar o desenvolvimento de alguma funcionalidade, ou correção, antes de finalizar, talvez não seja interessante realizar um commit, pois o nosso código pode não estar funcionando ainda. Nesse caso é interessante salvar o trabalho para podermos voltar a ele depois.
+
+3 - Já utilizamos em mais de uma ocasião o comando git checkout.
+
+Resumidamente, para que serve o comando git checkout?
+
+- __Para deixar o nosso código em determinado estado__
+
+> Alternativa correta! A descrição do comando 'git checkout --help', em uma tradução livre é: "Atualizar os arquivos na working tree para ficarem na versão especificada. [...]". Basicamente, podemos deixar o nosso código no estado do último commit de uma branch, de um commit específico, ou mesmo tags (que veremos adiante).
+
+- Para ver o nosso código antigo
+- Para sincronizar dados com o repositório remoto
