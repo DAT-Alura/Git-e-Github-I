@@ -38,3 +38,37 @@ Como podemos definir o nome da pessoa que executa commits no repositório local 
 > Alternativa correta! Assim todos os commits executados neste repositório serão atribuídos à pessoa com nome Nome da pessoa. Para mais detalhes e outras configurações possíveis (até algumas mais avançadas), você pode conferir este link: <https://git-scm.com/book/en/v2/Customizing-Git-Git-Configuration>.
 
 - git config --global user.name "Nome da pessoa"
+
+## Aula 3
+
+1 - No último vídeo, nós trabalhamos bastante. Nossa primeira tarefa foi criar um novo repositório, que será utilizado como o nosso "servidor" Git, ou seja, todos os membros da equipe o acessarão para compartilhar suas mudanças.
+
+Como fizemos para definir um repositório Git neste caso?
+
+- __git init --bare__
+
+> Alternativa correta! Com este comando nós criamos um repositório que não terá a working tree, ou seja, não conterá uma cópia dos nossos arquivos. Como o repositório servirá apenas como servidor, para que outros membros da equipe sincronizem seus trabalhos, poupamos espaço de armazenamento desta forma.
+
+- git serve
+- git init
+
+2 - Antes de sincronizar as nossas mudanças no código com algum repositório remoto, precisamos antes adicioná-lo ao nosso repositório local.
+
+Como adicionamos esta ligação entre os repositórios?
+
+- git remote nome-repositorio caminho/para/o/repositorio
+- git add remote nome-repositorio caminho/para/o/repositorio
+- __git remote add nome-repositorio caminho/para/o/repositorio__
+
+> Alternativa correta! Desta forma teremos um link do nosso repositório local com o repositório remoto, que chamamos de nome-repositorio, que está armazenado em caminho/para/o/repositorio.
+
+3 - Além de adicionar repositórios remotos para sincronizar os dados, vimos que o git clone traz um repositório remoto para o nosso computador, criando um repositório local.
+
+Ao alterar os códigos em nosso repositório local, como enviar as alterações para o repositório remoto?
+
+- __git push [repositorio] master__
+
+> Alternativa correta! Desta forma, nós enviamos as alterações em nosso branch master (falaremos mais sobre branches já já) para o repositório remoto. Basta substituir [repositorio] pelo nome que demos ao repositório ao adicioná-lo. Já para trazer os dados que estiverem no repositório remoto, podemos utilizar o git pull [repositorio] master.
+
+- git pull [repositorio] master
+- git push master [repositorio]
