@@ -148,3 +148,48 @@ Resumidamente, para que serve o comando git checkout?
 
 - Para ver o nosso código antigo
 - Para sincronizar dados com o repositório remoto
+
+## Aula 6
+
+1 - Com o comando git diff, nós vimos que é possível visualizarmos as mudanças realizadas em determinado código. Podemos ver as diferenças entre commits, branches, etc.
+
+Como o git diff exibe as mudanças no código?
+
+- __A__
+
+``` code
++ linha adicionada
+- linha removida
+- linha modificada (versão antiga)
++ linha modificada (nova versão)
+```
+
+> Alternativa correta! O sinal de subtração (-) antes da linha indica que ela não está mais presente no arquivo. Já o sinal de adição (+) mostra que é uma linha nova. Alterações são representadas por uma remoção e uma adição de linha.
+
+- B
+
+``` code
++ linha adicionada
+# linha removida
+# linha modificada (versão antiga)
++ linha modificada (nova versão)
+```
+
+- C
+
+``` code
+# linha adicionada
+- linha removida
+- linha modificada (versão antiga)
+# linha modificada (nova versão)
+```
+
+2 - Vimos no último vídeo como gerar versões, ou marcos interessantes em nosso sistema de controle de versões.
+
+Que resultado gera o envio de uma tag para o GitHub?
+
+- Nada diferente do que já vemos no terminal
+- Gera um pedido de melhoria
+- __Gera uma Release, ou seja, conseguimos baixar um arquivo compactado com o nosso código neste ponto__
+
+> Alternativa correta! O GitHub nos dá a possibilidade de baixar um arquivo compactado contendo o código no estado em que a tag foi gerada.
