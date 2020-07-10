@@ -72,3 +72,26 @@ Ao alterar os códigos em nosso repositório local, como enviar as alterações 
 
 - git pull [repositorio] master
 - git push master [repositorio]
+
+## Aula 4
+
+1 - Agora que entendemos como separar o desenvolvimento em linhas ("ramos") diferentes, é hora de trazer estas modificações para a master, que é a nossa branch "padrão".
+
+Como podemos fazer o merge da branch titulo para a branch master?
+
+- git merge titulo
+- git checkout titulo e git merge master
+- __git checkout master e git merge titulo__
+
+> Alternativa correta! Desta forma colocaremos o HEAD na branch master, ou seja, faremos com que o nosso código esteja no estado que o deixamos com o último commit na master. Depois, uniremos o trabalho da branch titulo com a branch atual (master).
+
+2 - Já sabemos como trazer o trabalho de outra branch e unir com a branch atual. Conhecemos duas formas de fazer isso: merge e rebase.
+
+Neste cenário, qual a diferença entre os comandos rebase e merge?
+
+- O 'rebase' junta os trabalhos e gera um commit de junção. O 'merge' aplica os commits de outra branch na branch atual.
+- __O 'merge' junta os trabalhos e gera um 'merge commit'. O rebase aplica os commits de outra branch na branch atual.__
+
+> Alternativa correta! Com isso, evitamos os commits de merge. Há uma longa discussão sobre o que é "melhor": rebase ou merge. Estude, pesquise, e tire suas próprias conclusões. Aqui tem um artigo (de milhares outros) que cita o assunto: <https://medium.com/datadriveninvestor/git-rebase-vs-merge-cc5199edd77c>.
+
+- Ambos são sinônimos, ou seja, não há diferença

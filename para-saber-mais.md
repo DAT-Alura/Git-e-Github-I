@@ -32,3 +32,28 @@ No último vídeo, nós conhecemos (bem por alto) um dos serviços mais famosos 
 Com o GitHub, podemos ter repositórios remotos públicos e privados gratuitos para armazenar e compartilhar o código dos nossos projetos.
 
 O GitHub fornece muitas outras funcionalidades bem legais. Explore-as, brinque com elas, e em outros cursos aqui na Alura nós vamos falar mais sobre esse assunto.
+
+## Ramificações (Branches)
+
+Branches ("ramos") são utilizados para desenvolver funcionalidades isoladas umas das outras. A branch master é a branch "padrão" quando você cria um repositório.
+
+É interessante separar o desenvolvimento de funcionalidades em branches diferentes, para que as mudanças no código para uma não influencie no funcionamento de outra.
+
+Nesta aula, entenderemos melhor como trabalhar com estes ramos, mas é muito importante que você entenda seu propósito.
+
+Em outros treinamentos aqui na Alura, falaremos mais sobre estratégias para organizar suas branches, então não precisa se preocupar tanto com isso agora! ;-)
+
+## Conflitos com rebase
+
+Vimos como é simples resolver conflitos identificados pelo Git ao tentar realizar o merge.
+
+Agora, gere um conflito e, ao invés de utilizar o merge, utilize o rebase para atualizar o master:
+
+- Vá para a branch titulo
+- Commite algo
+- Vá para a branch master, commite uma alteração na mesma linha
+- Execute git rebase titulo
+
+Veja a saída do Git e utilize as informações que ela te der para, após corrigir o conflito, continuar o rebase.
+
+Boa sorte! ;-)
